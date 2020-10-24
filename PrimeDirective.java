@@ -26,14 +26,26 @@ public class PrimeDirective{
     }
   }
 
+  public String showArray(ArrayList<Integer> arr){
+    String result = "";
+    for (int i : arr){
+      result += i + ", ";
+    }
+    return result;
+  }
+
+
   public static void main(String[] args){
 
     PrimeDirective pd = new PrimeDirective();
     int[] numbers = {6, 29, 28, 33, 11, 100, 101, 43, 89};
     pd.onlyPrimes(numbers);
     System.out.println("not prime nos: " + pd.notprimes.size());
+    System.out.println(pd.showArray(pd.notprimes));
     System.out.println("prime nos: " +pd.primes.size());
-    System.out.println(pd.numberArrayToString(primes));
+    System.out.println(pd.showArray(pd.primes));
+
+
 
     //CALL TEST FUNCTION System.out.println(pd.sayHello());
   }//MAIN
