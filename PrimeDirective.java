@@ -4,6 +4,7 @@ public class PrimeDirective{
 
   private ArrayList<Integer> primes = new ArrayList<Integer>();
   private ArrayList<Integer> notprimes = new ArrayList<Integer>();
+
   public Boolean isPrime(int num){
     Boolean isPrime = false;
     if (num == 2){isPrime = true;}
@@ -32,6 +33,7 @@ public class PrimeDirective{
     pd.onlyPrimes(numbers);
     System.out.println("not prime nos: " + pd.notprimes.size());
     System.out.println("prime nos: " +pd.primes.size());
+    System.out.println(pd.numberArrayToString(primes));
 
     //CALL TEST FUNCTION System.out.println(pd.sayHello());
   }//MAIN
